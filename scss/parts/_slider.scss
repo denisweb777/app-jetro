@@ -1,0 +1,38 @@
+.slider-section {
+    .slider-container {
+        padding: 15px 0;
+        background-color: #fef8de;
+        .slider {
+            .slider__element {
+                margin: 0 7px;
+                position: relative;
+                .slider__imgContainer {
+                    &:hover:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0, 110, 74, 0.8);
+                        opacity: 0.5;
+                    }
+                    .slider__img {
+                        width: 100%;
+                        height: auto;
+                        &:hover:before {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: #9f9acf;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+body
+{
+  font: 400 12px/1.5 'HelveticaNeue-jetro',Arial,sans-serif;
+}
+
+.wrapper
+{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  //фоновые шарики
+  #ballYellow{       
+    position: absolute;      
+    z-index: -1;   
+    top:2000px; 
+    left:6%;                                                       
+  } 
+  #ballGreen{       
+    position: absolute;      
+    z-index: -1;      
+    top:2000px;
+    right:6%;                                                        
+  }    
+} 
+     
+     
+    
+
+.header,  
+.greeting,
+.portfolio,
+.recentWorks,
+.map,
+.masonry,
+.footer,
+.slider-section
+{
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+}
+  
+.header-container,
+.greeting-container,
+.portfolio-container,
+.recentWorks-container,
+.map-container,
+.masonry-container,
+.footer-container,
+.slider-container
+{
+  margin-left: auto;
+  margin-right: auto;
+  width:73%;
+  min-width: 320px;
+  max-width: 960px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+//добавить общий container если элементы одинаково ограничены

@@ -1,0 +1,43 @@
+.greeting{
+    background: url('../img/greeting/backgroundColor.jpg');                    
+    background-size: 100% 70px;               
+    background-repeat: no-repeat;                       
+    .greeting-container{
+        background: #eb6c37 url('../img/greeting/background.jpg') 50% no-repeat;
+        background-size: cover;
+        padding: 245px 0 32px 36px;
+        border-left: 10px solid white;
+		border-right: 10px solid white;   
+        @include mq('tablet'){
+            transition: $transition;
+            padding-top: 150px;     
+        }
+        .greetingText{
+            padding:20px; 
+            background: rgba(232, 102, 60, .8);
+            .greetingText__title{
+                font-family: $font_family_Bebas;
+                color:  #ffffff;
+                font-size: 18px;
+                font-weight: 700;    
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .greetingText__description{
+                margin-top: 20px;
+                font-family: $font_family_HelveticaNeue;
+                color:  #ffffff;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: left;
+                word-wrap: break-word;
+                white-space:pre-line;
+            }
+        } 
+    }
+}
+
+ 
+
+
+

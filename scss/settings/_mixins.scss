@@ -1,0 +1,125 @@
+//центрирование блочного элемента
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+//для адаптивной картинки (добавлять в тег img)(img должна быть обернута в div)
+//у обертки div должна быть задана ширина в %
+//блок должен быть прижат к нужной оси
+@mixin adimg($width:100%){
+  height: auto;
+  max-width: 100%;
+}
+
+//для ::before и ::after
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+//для создания масштабируемых элементов (обычно изображения/картинки заднего фона)
+//--@includ responsive-ratio (задать соотношение сторон)
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+    &:before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+//для создания треугольников (для подсказок)
+//--@includ css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) (задаеть цвет, размер, направление)
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){
+  @include pseudo($pos: $position);
+  width: 0;
+  height: 0;
+  @if $round {
+    border-radius: 3px;
+  }
+  @if $direction == down {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+    margin-top: 0 - round( $size / 2.5 );
+  } @else if $direction == up {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+    margin-bottom: 0 - round( $size / 2.5 );
+  } @else if $direction == right {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    margin-right: -$size;
+  } @else if  $direction == left {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+    margin-left: -$size;
+  }
+}
+
+// для задания стилей шрифта
+// --@include font-source-sans($size: false, $colour: false, $weight: false,  $lh: false) {
+@mixin font-source-sans($size: false, $colour: false, $weight: false,  $lh: false) {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  @if $size { font-size: $size; }
+  @if $colour { color: $colour; }
+  @if $weight { font-weight: $weight; }
+  @if $lh { line-height: $lh; }
+}
+
+//для медиа запросов
+/*2 version*/
+/*--@include mq('tablet-wide') {
+     padding-top: 4rem;
+     font-size: 2.4rem;
+}
+*/
+
+$breakpoints: (
+        "desktop-wide": 1440px,
+        "desktop":      1200px,
+        "tablet-wide":  920px,
+        "tablet":       768px,
+        "phone-wide":   576px,
+        "phone":        320px,
+);
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+//для добавления усечения к элементу
+//--указать границу и максимальную ширину
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+//ускорение с помощью аппаратных средств для анимаций
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
+}
+

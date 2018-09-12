@@ -1,0 +1,162 @@
+.recentWorks{
+    .recentWorks-container{
+        .recentWorks__title{
+            margin: 37px 0 30px 0; 
+	        text-align: left;
+			font-family: $font_family_Bebas;
+			color:  rgba(232, 102, 60,1);
+			font-size: 20px;
+			font-weight: 700;
+			line-height: 24px;
+            letter-spacing: 0.05em;
+            @include mq('tablet'){
+                transition: $transition;
+                font-size: 18px;     
+        }
+        }
+        .recentWorks__line:empty{
+            background: url('../img/recentWorks/line.png') 50% no-repeat;  
+            background-size: cover;
+            margin: 40px 0 30px 0;
+            height: 18px;
+        }
+    }
+}
+  
+//настройка слайдера--------------------
+.container{
+    max-width: 700px;
+    margin:5px auto;
+    //slider1
+    .slider1{
+        .itemSl1{
+            position: relative; 
+            .imgSl1{
+                width: 100%;
+                height: auto;
+            }
+            .itemSl1__text{
+                position: absolute;   
+                background: rgba(71, 70, 69, 0.7);   
+                bottom: 0;
+                width: 100%;            
+                .itemSl1__title{
+                    font-family: $font_family_Bebas; 
+			        color:  rgba(232, 102, 60,1);
+                    font-size: 20px;   
+                    text-align: center; 
+                    padding:15px 0 5px 0;    
+                }
+                .itemSl1__data{
+                    font-family: $font_family_HelveticaNeue; 
+			        color:  rgb(228, 238, 228);
+                    font-size: 14px;                
+                    text-align: center;              
+                    padding-bottom: 10px;                                   
+                }
+            }
+        }
+    } 
+    //slider2
+    .slider2{
+        margin:40px 0 0 0;      
+        .itemSl2{
+        outline: none;  /*убрать обтекание синий рамкой при щелчке*/
+        margin: 0 7px;
+        cursor:pointer;
+            .imgSl2{ 
+                width: 100%;
+                height: auto;
+                transition: border .3s;
+                border:3px solid #ddd;
+                border-radius: 3px;
+                &:hover{
+                    border:3px solid rgba(232, 102, 60,1);   
+                }
+            }
+        } 
+    }  
+}
+      
+
+//настройка точек-------------------------
+//первый слайдер
+.slider1 .slick-dots{
+    top:10px;
+}
+
+//второй слайдер
+.slick-dots li button{            /*внешняя часть*/
+    
+    border: 1px solid #777;
+    border-radius:50%;
+    transition: border-color .3s;
+}
+
+.slick-dots li button::before{     /*внутренняя часть*/
+    content:'';
+    width: 10px;
+    height: 10px;
+    background: #777;
+    opacity: 1;
+    border-radius: 50%;
+    top:50%;
+    left:50%;
+    margin: -5px 0 0 -5px;
+    transition: background .3s;
+}
+
+.slick-dots li button:hover,                 /*внешняя часть при наведении*/
+.slick-dots li.slick-active button{        
+    border-color:#fff;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li.slick-active button::before{  /*внутрення часть при наведении*/
+    background: #fff;
+    
+}
+
+//настройка стрелок-----------------------
+.slick-prev, .slick-next{                    /*стили для обоих стрелок*/
+    z-index: 1001;                           /*стрелка перед слайдером*/
+    width: 32px;                             /*ширина стрелки*/
+    height: 32px;                            /*высота стрелки*/
+}
+
+.slick-prev{                                 /*стили для левой стрелки*/
+    left: 25px;                              /*изменение позиции стрелки*/
+}
+
+.slick-next{                                 /*стили для правой стрелки*/
+    right: 25px;                             /*изменение позиции стрелки*/
+}
+
+.slick-prev::before,.slick-next::before{     /*стили фона стрелок*/
+    font-size: 32px;
+}
+
+//настроки подключаемых стрелок
+#prev{
+    position: absolute;
+    right: -100px;      
+    top:30%;
+    cursor: pointer;
+    @include mq('tablet'){
+        transition: $transition;
+        display: none;         
+    }
+}
+
+#next{
+    position: absolute;
+    left: -100px;         
+    top:30%; 
+    cursor: pointer;
+    @include mq('tablet'){
+        transition: $transition;
+        display: none;     
+    }
+}
+
+

@@ -1,0 +1,20 @@
+@import "settings/base";
+@import "settings/fonts";
+@import "settings/vars";
+@import "settings/mixins";
+@import "settings/reset";
+@import "parts/header";
+@import "parts/greeting";
+@import "parts/portfolio";
+@import "parts/recentWorks";
+@import "parts/masonry";
+@import "parts/map";
+@import "parts/footer";
+@import "parts/slider";
+@import "libs/masonry";
+@import "libs/slick";
+@import "libs/slick-theme";
+@import "libs/map";
+
+//media-query
+@import "settings/media";

@@ -1,0 +1,38 @@
+/*include local*/
+//HelveticaNeue--------
+@font-face {
+    font-family: 'HelveticaNeue-jetro';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeue-jetro';
+    src: url('../fonts/openSans/HelveticaNeueCyr-Light.woff') format('woff');
+    font-weight: 300;
+    font-style:normal;
+  }
+  
+  //Bebas---------------
+  @font-face {
+    font-family: 'Bebas-jetro';
+    src: url('../fonts/Bebas/bebasneue_regular-webfont.woff') format('woff'),
+         url('../fonts/Bebas/bebasneue_regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Bebas-jetro';
+    src: url('../fonts/Bebas/bebasneue_bold-webfont.woff') format('woff'),
+         url('../fonts/Bebas/bebasneue_bold-webfont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /*https://fontstorage.com/ru/ (коллекция шрифтов)*/
+  /*https://assets2.adobe.com/assets/recent  (генерация стилей текста)*/
+  /*https://www.fontsquirrel.com/tools/webfont-generator   (генерация шрифтов)*/
+
+  

@@ -1,0 +1,45 @@
+/*настройки кнопок*/
+
+.buttonMasonry {
+	border: 1px solid #e8663c;
+	background-color: white;
+	margin-left: 2px;
+	font-family: $font_family_HelveticaNeue;
+	color: #414141;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+	letter-spacing: 0.1em;
+	padding: 0 30px 0 30px;
+	@include mq('tablet') {
+		transition: $transition;
+		padding: 0 10px 0 10px;
+	}
+}   
+.buttonMasonry_showAll {
+	background: #e8603c;
+	color: #ffffff;
+}
+/*настройки фона*/
+
+.grid {
+	background-color: #fef8de;
+}
+
+/*настройки элемента*/
+
+.grid-sizer, 
+.grid-item {
+	width: 15%;
+	min-width: 150px;
+}
+
+.grid-item {
+	margin: 1.5px;
+}
+
+.grid-item img {
+	max-width: 100%;
+	height: auto;
+}

@@ -1,0 +1,106 @@
+.footer {
+	background-color: #f3b29d;
+	margin-top: 50px;
+	.footer-container {
+		background-color: #e8663c;
+		border-left: 10px solid white;
+		border-right: 10px solid white;
+		.about-jetro {
+			.about-jetro__title {
+				font-family: $font_family_Bebas;
+				color: #ffffff;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 24px;
+				letter-spacing: 0.05em;
+				padding: 40px 0 0 25px;
+			}
+			.about-jetro__description1 {
+				font-family: $font_family_HelveticaNeue;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				text-align: left;
+				padding: 20px 0 0 25px;    
+				word-wrap: break-word;     
+			}
+			.about-jetro__description2 {
+				font-family: $font_family_HelveticaNeue;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				text-align: left;
+				padding: 15px 0 52px 25px; 
+				word-wrap: break-word;          
+			}
+		}
+		.twitter-widget{
+			.twitter-widget__title{
+				font-family: $font_family_Bebas;
+				color: #ffffff;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 24px;
+				letter-spacing: 0.05em;
+				padding: 40px 0 0 25px;
+
+			}
+			.twitter-widget__description{
+        font-family: $font_family_HelveticaNeue;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				text-align: left;
+				padding: 20px 0 52px 25px; 
+				word-wrap: break-word;   
+        white-space:pre-line;   
+			}  
+			.twitter-widget__description > span {         
+				color:#f3b29d;  
+			}
+
+		}
+
+		.contact-us{
+			.contact-us__title{
+				font-family: $font_family_Bebas;
+				color: #ffffff;
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 24px;
+				letter-spacing: 0.05em;
+				padding: 40px 0 0 25px;
+			}
+			.contact-us__description{
+				font-family: $font_family_HelveticaNeue;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				text-align: left;
+				padding: 20px 0 10px 25px;     
+				word-wrap: break-word;   
+			 
+			}
+			.contact-us__mail{
+				font-family: $font_family_HelveticaNeue;
+				color: #ffffff;
+				font-size: 12px;
+				font-weight: 400;
+				text-align: left;
+				padding: 0 0 0 25px;    
+				white-space:pre-line; 
+			}
+			.social{
+				display: flex; 
+				flex-wrap: wrap;  
+				padding:20px 0 0 25px;
+
+				.social__link{
+					padding-right: 8px; 
+					.social__img{     
+					}  
+				}
+			}
+		}
+	} 
+}

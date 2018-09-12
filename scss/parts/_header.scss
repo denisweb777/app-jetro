@@ -1,0 +1,69 @@
+.header{
+    background:$white;
+    padding:15px 0;
+    .header-container{ 
+        .logo{
+            font-family: $font_family_Bebas;
+            color:  #e8603c;
+            font-size: 36px;
+            font-weight: 700;
+            text-align: left;
+            text-transform: uppercase;
+            &>span{
+                color:#f3af9d;
+            }
+        }
+        .navMain{
+            .navMain__container{
+                display: flex;
+                justify-content:flex-end;
+                margin-top: 13px;
+                @include mq('tablet'){
+                    justify-content: space-between;     
+                }
+                .navMain__element{
+                    margin-left:22px;
+                    @include mq('tablet'){
+                        margin-left:0;
+                    }
+                    .navMain__link{
+                        font-family: $font_family_Bebas;
+                        color:  #1f7139;
+                        font-size: 18px;
+                        font-weight: 700;
+                        text-align: left;
+                        text-decoration: none; 
+                        text-transform: uppercase;
+                        letter-spacing: 0.1em;
+                        @include mq('phone-wide'){
+                            font-size: 12px; 
+                        }
+                        /*
+                        &:hover{
+                            color: #e8603c;
+                            transition: $transition;
+                        }
+                        */
+                    }
+                }
+                .navMain__element_right{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*https://dmitrylavrik.ru/flexbox-generator*/
+
+
+
+
+
+
+
+
+
+
+
